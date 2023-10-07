@@ -5,7 +5,7 @@ import StuffLayout from '../layout'
 const Faqs = () => {
   return (
     <StuffLayout>
-    <div className=' text-blue font-serif'>Faqs Page</div>
+    <div >Faqs Page</div>
     </StuffLayout>
   )
 }

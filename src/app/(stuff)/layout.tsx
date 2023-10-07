@@ -11,7 +11,6 @@ export default function StuffLayout({
   return (
     <div className={styles.page}>
       <Navbar />
-
       {children}
     </div>
   );
