@@ -1,9 +1,9 @@
-"use client";
+/* eslint-disable */
+'use client';
 import "./global.css";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 import { Providers } from "@/redux/provider/provider";
-
 
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+         <body suppressHydrationWarning={true}>
         <Providers>{children}</Providers>
       </body>
     </html>

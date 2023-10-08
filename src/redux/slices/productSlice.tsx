@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unused-modules, import/extensions */
+'use client'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Product } from '@/app/interfaces/product';
 
@@ -22,5 +24,5 @@ const productSlice = createSlice({
   },
 });
 
-export const { setProductList,  getCurrentProductState } = productSlice.actions;
+export const { setProductList, getCurrentProductState } = productSlice.actions;
 export default productSlice.reducer;

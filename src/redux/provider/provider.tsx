@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { store } from "../reducers/rootReducer";
 import { Provider } from "react-redux";

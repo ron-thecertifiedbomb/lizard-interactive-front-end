@@ -7,6 +7,36 @@
   ],
   "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier", "import"],
   "rules": {
-    // Add any additional ESLint rules or overrides here
+    "eslint-disable-next-line": "off",
+    "no-unused-vars": "off",
+    "import/no-unused-modules": "error",
+
+    // Enforce a consistent import order (you can customize the order)
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], ["internal", "parent", "sibling", "index"]],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+
+    // Prevent incorrect import file extensions
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+
+    // Prevent importing the same module multiple times
+    "no-duplicate-imports": "error"
   }
 }

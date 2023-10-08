@@ -15,7 +15,6 @@ const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state, action: PayloadAction<number>) => {
-      // Use action.payload to access the payload value
       state.value += action.payload;
     },
     decrement: (state, action: PayloadAction<number>) => {

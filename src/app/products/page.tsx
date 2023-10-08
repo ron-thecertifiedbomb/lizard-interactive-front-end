@@ -1,6 +1,7 @@
 import React from "react";
 import { Product } from "../interfaces/product";
 import ProductListRenderer from "../components/productlistrenderer/productlistrenderer";
+import RootLayout from "../layout";
 
 interface ApiResponse {
   data: {
@@ -9,7 +10,6 @@ interface ApiResponse {
 }
 
 async function getData(): Promise<Product[]> {
-
   const headers = {
     Authorization: "Bearer YOUR_ACCESS_TOKEN",
     "Content-Type": "application/json",
@@ -34,18 +34,18 @@ async function getData(): Promise<Product[]> {
     throw new Error("Failed to fetch data");
   }
 
-  const responseData: ApiResponse = await res.json();
-  return responseData.data.products;
+  const productlist: ApiResponse = await res.json();
+  return productlist.data.products;
 }
 
-
 export default async function ProductList() {
+  const productlist = await getData();
 
-  const data = await getData();
-  const productlist = data
-  console.log(productlist);
-
-  return <main>
-    <ProductListRenderer productlist={productlist} />
-    </main>;
+  return (
+    <RootLayout >
+    <main>
+      <ProductListRenderer productlist={productlist} />
+    </main>
+    </RootLayout>
+  );
 }
