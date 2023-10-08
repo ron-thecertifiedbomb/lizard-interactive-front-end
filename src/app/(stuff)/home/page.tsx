@@ -3,6 +3,7 @@ import React from "react";
 import StuffLayout from "../layout";
 
 const Stuff = () => {
+  
 
   return (
     <StuffLayout>

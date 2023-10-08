@@ -1,13 +1,14 @@
+"use client";
+import React from "react";
+import RootLayout from "./layout";
+import Counter from "./components/counter/counter";
 
-import React from 'react'
-
-
-const page = () => {
+const HomePage = () => {
   return (
-    <div>Home Page</div>
-  )
-}
+    <RootLayout>
+      <Counter />
+    </RootLayout>
+  );
+};
 
-export default page
-
-
+export default HomePage;

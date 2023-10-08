@@ -2,6 +2,7 @@ import React from "react";
 import navbar from "./navbarstyle.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "../logo/logo";
 
 const Navbar = () => {
 
@@ -32,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div className={navbar.container}>
-      <div>Logo</div>
+      <div><Logo /></div>
       <div className={navbar.wrapper}>
         {navLinks.map((link, index) => (
           <p key={index}>
