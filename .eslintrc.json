@@ -4,14 +4,15 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
+    
   ],
+  "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier", "import"],
   "rules": {
     "eslint-disable-next-line": "off",
     "no-unused-vars": "off",
     "import/no-unused-modules": "error",
 
-    // Enforce a consistent import order (you can customize the order)
     "import/order": [
       "error",
       {
@@ -24,7 +25,7 @@
       }
     ],
 
-    // Prevent incorrect import file extensions
+ 
     "import/extensions": [
       "error",
       "ignorePackages",
