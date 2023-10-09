@@ -43,7 +43,7 @@ const ProductListRenderer: React.FC<ProductListRendererProps> = ({
   return (
   
     <div className="flex flex-wrap gap-5 w-[1200px] justify-center pt-[20px] m-auto">
-    {productlist.map((product, index) => (
+    {fetchReduxData.map((product, index) => (
       <ProductCard
         key={index} 
         productList={product}

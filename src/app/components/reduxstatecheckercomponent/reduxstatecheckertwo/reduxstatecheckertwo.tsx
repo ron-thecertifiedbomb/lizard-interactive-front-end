@@ -3,16 +3,14 @@ import React from 'react'
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store"; 
 
-const ReduxStateCheckerOne = () => {
+const ReduxStateCheckerTwo = () => {
 
   const message = useSelector((state: RootState) => state.connection.message);
-
-
   return (
     <div>
-    <p>Current Message ReduxChecker I: {message}</p>
+        <p>Component 2: {message}</p>
       </div>
   )
 }
 
-export default ReduxStateCheckerOne
+export default ReduxStateCheckerTwo

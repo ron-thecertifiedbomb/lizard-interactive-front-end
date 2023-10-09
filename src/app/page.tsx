@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import RootLayout from "./layout";
 import Counter from "./components/counter/counter";
 import { RootState } from "@/redux/store"; 
+import CounterButtons from "./components/counter/counterbuttons";
+import ReduxStateCheckerOne from "@/components/reduxstatechecker";
 
 const HomePage = () => {
   
@@ -12,7 +14,8 @@ const HomePage = () => {
   return (
     <RootLayout>
       <Counter />
-      {message && <div>{message}</div>}
+      <CounterButtons />
+     
     </RootLayout>
   );
 };

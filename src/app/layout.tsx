@@ -1,8 +1,6 @@
 /* eslint-disable */
 'use client';
 import "./global.css";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
 import { Providers } from "@/redux/provider/provider";
 
 

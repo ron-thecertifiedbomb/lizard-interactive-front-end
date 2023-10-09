@@ -42,10 +42,8 @@ export default async function ProductList() {
   const productlist = await getData();
 
   return (
-    <RootLayout >
-    <main>
+    <RootLayout>
       <ProductListRenderer productlist={productlist} />
-    </main>
     </RootLayout>
   );
 }
